@@ -1,0 +1,6 @@
+data = [
+  {
+    "projName": "Project one stuff",
+    "projImg": "./img/"
+  }
+]
