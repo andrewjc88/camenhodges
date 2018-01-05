@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../styles/app.css';
 import TitleBar from './titlebar'
-import AppAccordion from './appAccordion';
+import Accordion from './accordion';
+import Carousel from './carousel';
 
 
 class App extends Component {
@@ -9,7 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <TitleBar />
-        <AppAccordion />
+        <Accordion />
+        <Carousel /> 
       </div>
     );
   }

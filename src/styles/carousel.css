@@ -1,0 +1,14 @@
+.Carousel {
+  width: auto;
+  height: auto;
+  /* min-height: 30em; */
+
+
+}
+
+.SliderImg {
+  width: 100%;
+  padding: 1em 0em;
+  margin: auto;
+  /* height: 5em; */
+}

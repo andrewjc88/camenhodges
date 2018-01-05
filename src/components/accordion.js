@@ -1,7 +1,7 @@
 import React from 'react';
 import About from './about';
 import ProjectsDetails from './projectDetails';
-import Projects from './projectsList';
+import VideoPlayer from './videoPlayer';
 import DownArrow from '../img/downArrow.png';
 
 import {
@@ -15,12 +15,15 @@ import '../styles/accordion.css';
 
 const AppAccordion = () => (
   <Accordion 
-    ClassName='accordion'
-    onChange={console.log("changed!")}>
+    accordion={false}
+    className='accordion'>
     <AccordionItem>
       <AccordionItemTitle>
-        <h3>About</h3>
-        <img src={DownArrow} alt='Down arrow'/>
+        <hr className='line'/>
+        <h3 className="u-position-relative">
+          ABOUT
+        <div className="accordion__arrow" role="presentation" />
+        </h3>
       </AccordionItemTitle>
       <AccordionItemBody>
         <About /> 
@@ -28,18 +31,13 @@ const AppAccordion = () => (
     </AccordionItem>
     <AccordionItem>
       <AccordionItemTitle>
-        <h3>"Project Name"</h3>
+        <VideoPlayer />
+        <hr className='line'/>
+
+        MORE
       </AccordionItemTitle>
       <AccordionItemBody>
         <ProjectsDetails />
-      </AccordionItemBody>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionItemTitle>
-        <h3>"Project Details"</h3>
-      </AccordionItemTitle>
-      <AccordionItemBody>
-        <Projects />
       </AccordionItemBody>
     </AccordionItem>
   </Accordion>
