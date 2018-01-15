@@ -4,12 +4,12 @@ import Slider from 'react-slick';
 import 'aos/dist/aos.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../styles/carousel.css';
 
 class ProjectsCarousel extends React.Component {
   render() {
 
     let settings = {
+      cneter: true,
       swipeToSlide: true,
       autoplay: true,
       infinite: true,
@@ -18,35 +18,47 @@ class ProjectsCarousel extends React.Component {
       pauseOnHover: true,
       autoplaySpeed: 9000,
       dots: true,
-      adaptiveHeight: true,
-      adaptiveWidth: true, 
-
+      // adaptiveHeight: true,
+      // adaptiveWidth: true, 
     };
 
-    return (
-      <Slider {...settings} className='carousel'>
-        <div className='Slider'>
-          <img className='SliderImg' src='https://source.unsplash.com/400x200/?nature,water' alt="My Reads app Image"/>
-          <a href="https://youtube.com">DealQuest App</a>
-          <p className="SliderText">In this app I used Create React App with React Router to pull books from an API and display and sort them</p>
-        </div>
-        <div className='Slider'>
-          <img className='SliderImg' src='https://source.unsplash.com/400x200/?nature,water' alt="My Reads app Image"/>
-          <a href="https://youtube.com">DealQuest App</a>
-          <p className="SliderText">I used knockout.js, Foundation, google map JavaScript API and Groupon Ajax API to make a deal search tool.</p>
-        </div>
-        <div className='Slider'>
-          <img className='SliderImg' src='https://source.unsplash.com/400x200/?nature,water' alt="My Reads app Image"/>
-          <a href="https://youtube.com">DealQuest App</a>
-          <p className="SliderText">I used knockout.js, Foundation, google map JavaScript API and Groupon Ajax API to make a deal search tool.</p>
-        </div>
-        <div className='Slider'>
-          <img className='SliderImg' src='https://source.unsplash.com/400x200/?nature,water' alt="My Reads app Image"/>
-          <a href="https://youtube.com">DealQuest App</a>
-          <p className="SliderText">I used knockout.js, Foundation, google map JavaScript API and Groupon Ajax API to make a deal search tool.</p>
-        </div>
+    let ContainerStyle = {
+      width: '85vw',
+      margin: '4em auto',
+    }
+    const CarouselStyle = {
+      // width: '30em',
+      // height: 'auto',
+      // minHeight: '30em',
+    }
+    const ImgStyle = {
+      // width: '100%',
+      // padding: '1em 0em',
+      // margin: 'auto',
+      // height: '5em',
+    }
 
-      </Slider>
+    return (
+      <div style={ContainerStyle}>
+        <Slider {...settings} style={CarouselStyle}>
+          <div className='Slider'>
+            <img style={ImgStyle} src='https://source.unsplash.com/400x200/?nature,water' alt="My Reads app"/>
+            <a href="https://youtube.com">DealQuest App</a>
+          </div>
+          <div className='Slider'>
+            <img className='SliderImg' src='https://source.unsplash.com/400x200/?nature,lakes' alt="My Reads app"/>
+            <a href="https://youtube.com">DealQuest App</a>
+          </div>
+          <div className='Slider'>
+            <img className='SliderImg' src='https://source.unsplash.com/400x200/?nature,hills' alt="My Reads app"/>
+            <a href="https://youtube.com">DealQuest App</a>
+          </div>
+          <div className='Slider'>
+            <img className='SliderImg' src='https://source.unsplash.com/400x200/?nature,trees' alt="My Reads app"/>
+            <a href="https://youtube.com">DealQuest App</a>
+          </div>
+        </Slider>
+      </div>
     );
   }
 }

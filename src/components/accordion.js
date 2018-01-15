@@ -11,36 +11,56 @@ import {
   AccordionItemBody,
 } from 'react-accessible-accordion';
 
-import '../styles/accordion.css';
+const AppAccordion = () => {
 
-const AppAccordion = () => (
-  <Accordion 
-    accordion={false}
-    className='accordion'>
-    <AccordionItem>
-      <AccordionItemTitle>
-        <hr className='line'/>
-        <h3 className="u-position-relative">
-          ABOUT
-        <div className="accordion__arrow" role="presentation" />
-        </h3>
-      </AccordionItemTitle>
-      <AccordionItemBody>
-        <About /> 
-      </AccordionItemBody>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionItemTitle>
-        <VideoPlayer />
-        <hr className='line'/>
+  const tabs = {
+    color: 'white',
+  }
+  const line = {
+    borderStyle: 'dotted',
+    borderImageSlice: '3% 3%',
+    borderImageRepeat: 'round',
+  }
+  const ContainerStyle = {
+    width: 'auto',
+    animation: 'fadein .5s ease-in',
+  }
+  const accordionBody = {
+    // width: '100vw',
+    // animation: 'fadein .5s ease-in',
+  }
 
-        MORE
-      </AccordionItemTitle>
-      <AccordionItemBody>
-        <ProjectsDetails />
-      </AccordionItemBody>
-    </AccordionItem>
-  </Accordion>
-);
+  return (
+    <div style={ContainerStyle}> 
+      <Accordion 
+        accordion={false}
+        style={accordionBody}>
+        <AccordionItem>
+          <AccordionItemTitle>
+            <hr style={tabs}/>
+            <h3 className="u-position-relative">
+              ABOUT
+            <div className="accordion__arrow" role="presentation" />
+            </h3>
+          </AccordionItemTitle>
+          <AccordionItemBody>
+            <About /> 
+          </AccordionItemBody>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionItemTitle>
+            <VideoPlayer />
+            <hr style={line}/>
+
+            MORE
+          </AccordionItemTitle>
+          <AccordionItemBody>
+            <ProjectsDetails />
+          </AccordionItemBody>
+        </AccordionItem>
+      </Accordion>
+    </div>
+  )
+};
 
 export default AppAccordion;

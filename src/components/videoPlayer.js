@@ -1,21 +1,25 @@
 import React from 'react';
-import Slider from '../styles/videoPlayer.css';
 
 const About = () => {
 
+  const frameDiv = {
+    margin: 'auto',
+    // width: '100%',
+    // height: '900px',
+  }
+
   return (
-    <div className='video-player'>
+    <div style={frameDiv}>
       <iframe 
-        width='100%' 
-        height='100%' 
+        title='mainVid'
+        width='99%' 
+        height='400' 
         src="https://www.youtube.com/embed/4nhj9vI_pUM?rel=0&amp;showinfo=0" 
-        frameborder="0" 
-        gesture="media" 
-        allow="encrypted-media" 
-        allowfullscreen="0">
+      >
       </iframe> 
     </div>
   )
+
 }
 
 export default About;
