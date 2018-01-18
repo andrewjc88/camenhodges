@@ -1,6 +1,20 @@
 .App {
   text-align: center;
-  /* background-color: #313131; */
   height: auto;
   color: rgb(230, 230, 230);
+  margin: auto;
+}
+
+.instaStyle {
+  display: block;
+  position: fixed;
+  
+  bottom: 2em;
+  right: 10%;
+  width: 2em;
+  height: 2em;
+  filter: drop-shadow(2px 2px 4px #1d1d1d); 
+  background-image: url('./img/insta.svg');
+  background-size: contain;
+
 }

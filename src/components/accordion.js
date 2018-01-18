@@ -2,7 +2,9 @@ import React from 'react';
 import About from './about';
 import ProjectsDetails from './projectDetails';
 import VideoPlayer from './videoPlayer';
-import DownArrow from '../img/downArrow.png';
+import './accordion.css'
+
+import '../../node_modules/react-accessible-accordion/dist/react-accessible-accordion.css';
 
 import {
   Accordion,
@@ -13,34 +15,17 @@ import {
 
 const AppAccordion = () => {
 
-  const tabs = {
-    color: 'white',
-  }
-  const line = {
-    borderStyle: 'dotted',
-    borderImageSlice: '3% 3%',
-    borderImageRepeat: 'round',
-  }
-  const ContainerStyle = {
-    width: 'auto',
-    animation: 'fadein .5s ease-in',
-  }
-  const accordionBody = {
-    // width: '100vw',
-    // animation: 'fadein .5s ease-in',
-  }
-
   return (
-    <div style={ContainerStyle}> 
+    <div>
       <Accordion 
-        accordion={false}
-        style={accordionBody}>
+        accordion={false}>
         <AccordionItem>
           <AccordionItemTitle>
-            <hr style={tabs}/>
-            <h3 className="u-position-relative">
+            <h3 className='titleStyle'>
+              <hr className='lineStyle'/>
+              <div className='tabStyle'/>
               ABOUT
-            <div className="accordion__arrow" role="presentation" />
+              <div className="accordion__arrow" role="presentation" />
             </h3>
           </AccordionItemTitle>
           <AccordionItemBody>
@@ -50,9 +35,12 @@ const AppAccordion = () => {
         <AccordionItem>
           <AccordionItemTitle>
             <VideoPlayer />
-            <hr style={line}/>
-
-            MORE
+            <h3 className='titleStyle'> 
+              <hr className='lineStyle'/>
+              <div className='tabStyle'/>
+              MORE
+              <div className="accordion__arrow" role="presentation" />
+            </h3>
           </AccordionItemTitle>
           <AccordionItemBody>
             <ProjectsDetails />

@@ -9,7 +9,7 @@ class ProjectsCarousel extends React.Component {
   render() {
 
     let settings = {
-      cneter: true,
+      // cneter: true,
       swipeToSlide: true,
       autoplay: true,
       infinite: true,
@@ -18,45 +18,71 @@ class ProjectsCarousel extends React.Component {
       pauseOnHover: true,
       autoplaySpeed: 9000,
       dots: true,
+      arrows: false,
+
       // adaptiveHeight: true,
       // adaptiveWidth: true, 
     };
 
     let ContainerStyle = {
-      width: '85vw',
-      margin: '4em auto',
+      margin: '-3em 0em 4em 0em',
+      zIndex: '-4',
+
     }
     const CarouselStyle = {
       // width: '30em',
-      // height: 'auto',
+      // height: '10em',
       // minHeight: '30em',
     }
     const ImgStyle = {
-      // width: '100%',
-      // padding: '1em 0em',
+      width: '100%',
+    }
+    const labelStyle = {
+      position: 'fixed',
+
+      zIndex: '1',
+      marginTop: '2em',
+      backgroundColor: 'rgba(0, 0, 0, 0.644)',
+      // backgroundSize: '100% 100%',
       // margin: 'auto',
-      // height: '5em',
+      // padding: '1em auto',
+      color: 'white',
+      padding:'.5em 2em',
+      textDecorationStyle: 'none',
+      textDecoration: 'none',
     }
 
     return (
       <div style={ContainerStyle}>
         <Slider {...settings} style={CarouselStyle}>
-          <div className='Slider'>
-            <img style={ImgStyle} src='https://source.unsplash.com/400x200/?nature,water' alt="My Reads app"/>
-            <a href="https://youtube.com">DealQuest App</a>
-          </div>
-          <div className='Slider'>
-            <img className='SliderImg' src='https://source.unsplash.com/400x200/?nature,lakes' alt="My Reads app"/>
-            <a href="https://youtube.com">DealQuest App</a>
-          </div>
-          <div className='Slider'>
-            <img className='SliderImg' src='https://source.unsplash.com/400x200/?nature,hills' alt="My Reads app"/>
-            <a href="https://youtube.com">DealQuest App</a>
-          </div>
-          <div className='Slider'>
-            <img className='SliderImg' src='https://source.unsplash.com/400x200/?nature,trees' alt="My Reads app"/>
-            <a href="https://youtube.com">DealQuest App</a>
-          </div>
+          <a
+            href="https://youtube.com">
+            <h2 style={labelStyle} >Film move one</h2>
+            <img style={ImgStyle} 
+              src= 'https://source.unsplash.com/I1ASdgphUH4/600x800' 
+              alt="My Reads app"/>
+          </a>
+          <a
+            href="https://youtube.com">
+            <h2 style={labelStyle} >Film move one</h2>
+            <img style={ImgStyle} 
+              src= 'https://source.unsplash.com/zh7GEuORbUw/600x800' 
+              alt="My Reads app"/>
+          </a>
+          <a
+            href="https://youtube.com">
+            <h2 style={labelStyle} >Film move one</h2>
+            <img style={ImgStyle} 
+              src= 'https://source.unsplash.com/qDkso9nvCg0/600x800' 
+              alt="My Reads app"/>
+          </a>
+          <a
+            href="https://youtube.com">
+            <h2 style={labelStyle} >Film move one</h2>
+            <img style={ImgStyle} 
+              src= 'https://source.unsplash.com/epcsn8Ed8kY/600x800' 
+              alt="My Reads app"/>
+          </a>
         </Slider>
       </div>
     );
