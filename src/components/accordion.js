@@ -13,34 +13,30 @@ import {
   AccordionItemBody,
 } from 'react-accessible-accordion';
 
+// <div className='tabStyle'/>
+// <div className='tabStyle'/>
+
 const AppAccordion = () => {
 
   return (
     <div>
-      <Accordion 
+      <Accordion
         accordion={false}>
         <AccordionItem>
           <AccordionItemTitle>
-            <h3 className='titleStyle'>
-              <hr className='lineStyle'/>
-              <div className='tabStyle'/>
-              ABOUT
-              <div className="accordion__arrow" role="presentation" />
-            </h3>
+            <h3 className='titleStyle'>About</h3>
+            <div className="accordion__arrow"
+              role="presentation" />
           </AccordionItemTitle>
           <AccordionItemBody>
-            <About /> 
+            <About />
           </AccordionItemBody>
         </AccordionItem>
         <AccordionItem>
+          <VideoPlayer />
           <AccordionItemTitle>
-            <VideoPlayer />
-            <h3 className='titleStyle'> 
-              <hr className='lineStyle'/>
-              <div className='tabStyle'/>
-              MORE
-              <div className="accordion__arrow" role="presentation" />
-            </h3>
+            <h3 className='titleStyle'>Details</h3>
+            <div className="accordion__arrow" role="presentation" />
           </AccordionItemTitle>
           <AccordionItemBody>
             <ProjectsDetails />

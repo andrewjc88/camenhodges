@@ -16,89 +16,96 @@
 .accordion__item--has-icon {
     position: relative;
 }
-.titleStyle {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
-    margin: 0;
-    cursor: pointer;
-    z-index: 3;
+.accordion__title:hover {
+    /* background-color: #ddd; */
+}
+.accordion__title {
+    background-color: #151515;
+    padding: .1em;
+}
+
+.accordion__body {
+    /* padding: 20px; */
+}
+.accordion__title > *:last-child,
+.accordion__body > *:last-child {
+    margin-bottom: 0;
+}
+/* .tabContainer {
+  z-index: 6;
+  background-color: #151515;
 }
 .lineStyle {
     border: .05em solid white;
     margin: 0;
-    z-index: 0;
-    /* filter: drop-shadow(0px 0px 4px #d6d3b8); */
-}
-.tabStyle {
+    z-index: 1;
+    filter: drop-shadow(0px 0px 4px #d6d3b8);
+} */
+/* .tabStyle {
+    display: inline-block;
+    align-self: center;
     background-color: #1F1F1F;
-    position: absolute;
     height: 2.5em;
     width: 5em;
-    z-index: -1;
-    align-self: center;
     border-radius: 0 0 90px 90px;
     border: .1em solid white;
     border-top: none;
-    /* filter: drop-shadow(0px 0px 4px #d6d3b8); */
+} */
+.accordion__title {
+  position: relative;
+  background-color: #151515;
+  color: lightGrey;
+  cursor: pointer;
+  padding:  .05em 0em;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
 }
-    .accordion__title:hover {
-        /* background-color: #ddd; */
-    }
+.accordion__arrow {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  margin-top: -6px;
+}
 
-    .accordion__body {
-        /* padding: 20px; */
-    }
+.accordion__arrow::after,
+.accordion__arrow::before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    background-color: currentColor;
+    content: '';
+    outline: none;
+}
 
-    .accordion__title > *:last-child,
-    .accordion__body > *:last-child {
-        margin-bottom: 0;
-    }
+.accordion__arrow::before {
+    left: 4px;
+    transform: rotate(45deg);
+}
 
-        .accordion__arrow {
-            
-            display: inline-block;
-            align-self: center;
-            margin-top: -.5em;
-            width: 1.3em;
-            height: 2em;
-            /* z-index: 4; */
-            position: relative;
-        }
+[aria-expanded="true"] .accordion__arrow::before {
+    transform: rotate(-45deg);
+}
 
-        .accordion__arrow::after,
-        .accordion__arrow::before {
-            display: block;
-            position: absolute;
-            top: 50%;
-            width: 10px;
-            height: 2px;
-            background-color: currentColor;
-            content: '';
-        }
+.accordion__arrow::after {
+    right: 4px;
+    transform: rotate(-45deg);
+}
 
-        .accordion__arrow::before {
-            left: 4px;
-            transform: rotate(45deg);
-        }
+[aria-expanded="true"] .accordion__arrow::after {
+    transform: rotate(45deg);
+}
 
-        [aria-expanded="true"] .accordion__arrow::before {
-            transform: rotate(-45deg);
-        }
-
-        .accordion__arrow::after {
-            right: 4px;
-            transform: rotate(-45deg);
-        }
-
-        [aria-expanded="true"] .accordion__arrow::after {
-            transform: rotate(45deg);
-        }
-
-        .accordion__arrow::before, .accordion__arrow::after {
-            transition: transform .25s ease, -webkit-transform .25s ease;
-        }
+.accordion__arrow::before, .accordion__arrow::after {
+    transition: transform .25s ease, -webkit-transform .25s ease;
+}
 
 /* -------------------------------------------------- */
 /* ---------------- Animation part ------------------ */
@@ -122,11 +129,11 @@
 
 .accordion__title--animated:hover .accordion__arrow {
     animation-name: move-down;
-    animation-duration: 1.5s;
+    animation-duration: 2.5s;
 }
 
 .accordion__title--animated[aria-expanded="true"]:hover .accordion__arrow {
     animation-name: move-up;
-    animation-duration: 1.5s;
+    animation-duration: 2.5s;
     transition: move-up;
 }

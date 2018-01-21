@@ -2,14 +2,12 @@ import React from 'react';
 import Logo from '../img/logo.png';
 
 const TitleBar = () => {
-  
+
   const titleBar = {
     backgroundColor: '#1F1F1F',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    zIndex: '5'
-    
   }
   const LogoStyle = {
     margin: '4em 6em',

@@ -55,20 +55,20 @@ class App extends Component {
 
     return (
       <div className="App">
-        {this.state.deployed === true && <ComingSoon />}  
+        // {this.state.deployed === true && <ComingSoon />}
           <TitleBar />
           <Accordion />
-          <Carousel /> 
+          <Carousel />
           {/* <div>
-            <img 
-              className='instaStyle' 
+            <img
+              className='instaStyle'
               src={InstaLogo}
               alt="Instagram link"/>
           </div> */}
 
-          <a href="http://www.instagram.com"
-            className="instaStyle"
-          ></a>
+          <a href="http://www.instagram.com">
+            <div className="instaStyle"/>
+          </a>
 
       </div>
     );
