@@ -51,11 +51,11 @@ class App extends Component {
     }
     this.setState({ deployed })
   }
+  
   render() {
-
     return (
       <div className="App">
-        // {this.state.deployed === true && <ComingSoon />}
+        {this.state.deployed === true && <ComingSoon />}
           <TitleBar />
           <Accordion />
           <Carousel />
