@@ -4,17 +4,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@svgr/cli": "^2.3.0",
     "aos": "^2.2.0",
     "gh-pages": "^1.2.0",
     "jquery": "^3.2.1",
     "react": "^15.6.2",
     "react-accessible-accordion": "^1.0.2",
     "react-dom": "^15.6.2",
+    "react-feather": "^1.1.3",
     "react-grid-gallery": "^0.4.8",
     "react-photo-gallery": "^6.0.22",
-    "react-scripts": "^1.1.4",
+    "react-scripts": "^1.1.5",
     "react-sleek-photo-gallery": "^0.1.2",
-    "react-slick": "^0.16.0"
+    "react-slick": "^0.16.0",
+    "svg-to-react-cli": "^1.5.0"
   },
   "scripts": {
     "predeploy": "npm run build",

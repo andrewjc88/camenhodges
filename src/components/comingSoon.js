@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from '../img/logo.png'
 
 const ComingSoon = () => {
 
@@ -27,7 +26,7 @@ const ComingSoon = () => {
 return (
     <div style={coverStyle}>
       <div style={contStyle}>
-        <img style={logoStyle} src={Logo} alt='coming soon logo'/>
+        <img style={logoStyle}  alt='coming soon logo'/>
         <h1>Coming Soon!</h1>
       </div>
     </div>

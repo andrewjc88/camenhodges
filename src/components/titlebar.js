@@ -10,16 +10,15 @@ const TitleBar = () => {
     justifyContent: 'center',
   }
   const LogoStyle = {
-    margin: '4em 6em',
+    margin: '4em 0em',
     width: '60%',
-    minWidth: '20em',
     maxWidth: '35em',
     alignSelf: 'center',
     filter: 'drop-shadow(0px 0px 4px #d6d3b8)',
   }
 
   return (
-    <div style={titleBar}>
+    <div>
       <img style={LogoStyle} src={Logo} alt="Camen Hodges Logo"/>
     </div>
   );

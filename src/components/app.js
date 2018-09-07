@@ -4,6 +4,9 @@ import TitleBar from './titlebar'
 import Accordion from './accordion';
 import Carousel from './carousel';
 import ComingSoon from './comingSoon';
+import VideoPlay from './videoPlayer';
+import About from './about';
+import Contact from './contact';
 
 class App extends Component {
   state = {
@@ -39,33 +42,15 @@ class App extends Component {
       },
     ]
   }
-
-  componentWillMount() {
-    let deployed;
-    if (window.location.href.includes("http://localhost:3000/")) {
-      deployed = false;
-      console.log('This site is not deployed')
-    } else {
-      deployed = true;
-      console.log('This site is deployed')
-    }
-    this.setState({ deployed })
-  }
   
   render() {
     return (
       <div className="App">
         {this.state.deployed === true && <ComingSoon />}
           <TitleBar />
-          <Accordion />
-          <Carousel />
-          {/* <div>
-            <img
-              className='instaStyle'
-              src={InstaLogo}
-              alt="Instagram link"/>
-          </div> */}
-
+          <VideoPlay />
+          <About /> 
+          <Contact />
           <a href="http://www.instagram.com">
             <div className="instaStyle"/>
           </a>

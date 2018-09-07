@@ -7,8 +7,9 @@ const About = () => {
     maxWidth: '40em',
     backgroundColor: '#000000',
     // marginTop: '-4.2em',
-    textAlign: 'left',
+    textAlign: 'center',
     margin: ' auto',
+    marginTop: '1em',
     padding: '2em',
     // padding: '4em'
     // zIndex:'-4',
@@ -31,7 +32,8 @@ const About = () => {
     <div style={Container}>
       <h1 style={titleStyle}>Camen Hodges</h1>
       <div style={BodyTextStyle}>
-        If there is one thing kids love more than eating pizza, it’s being able to make it themselves using all their favorite toppings. Creating a “make it yourself” pizza party is a great way to customize the meal while involving friends and family in a fun activity. Best of all, this crust recipe, which uses a surprise ingredient, is simple enough to make at home without making a mess of the kitchen. The secret to this simple crust is the addition of potatoes.
+       Freelance Director, Producer and Cinematographer. From directing 
+award winning theater to convincing the Reno Bomb Squad to blow up a car for him, Camen is always 100% committed to getting the very best work done. And he's just a phone call away
       </div>
 
     </div>
